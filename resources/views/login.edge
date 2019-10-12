@@ -1,0 +1,22 @@
+@layout('main')
+@section('content')
+<h1 class="mb-3">Login</h1>
+
+  <form action="{{ route('/login') }}" method="POST">
+    {{ csrfField() }}
+    <div class="mb-3">
+      <label for="">Email</label>
+      <input type="text" class="form-control" name="email" placeholder="Your email" value="">
+    </div>
+
+    <div class="mb-3">
+      <label for="">Password</label>
+      <input type="password" class="form-control" name="password" placeholder="Your password" value="">
+    </div>
+
+    <button class="btn btn-primary" type="submit">Login</button>
+
+  </form>
+  <hr class="mb-3">
+  <a href="/addUser">Cadastre-se Grátis!</a>
+@endsection
